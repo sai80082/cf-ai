@@ -1,0 +1,7 @@
+services:
+  cf-ai:
+    image: cf-ai
+    environment:
+      - ACCOUNTID=XXXXXXXXXXXXXXXXXXXXXXXXXX
+    ports:
+      - "5050:5050"
