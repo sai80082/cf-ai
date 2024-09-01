@@ -1,25 +1,11 @@
 from flask import Flask, jsonify, request,Response
 import requests
 import os
+from models import models
 app = Flask(__name__)
 accountid = os.getenv('ACCOUNTID')
 print(f"Account ID: {accountid}")
-models = {
-  "object": "list",
-  "data": [
-    {
-      "id": "@cf/meta/llama-3.1-8b-instruct",
-      "object": "model",
-      "owned_by": "cloudflare-ai-beta"
-    },
-    {
-      "id": "@hf/google/gemma-7b-it",
-      "object": "model",
-      "owned_by": "cloudflare-ai-beta"
-    }
-  ],
-  "object": "list"
-}
+
 
 @app.route('/v1/models', methods=['GET'])
 def get_models():
