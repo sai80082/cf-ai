@@ -1,4 +1,6 @@
-models = [
+models = {
+  "object": "list",
+  "data": [
     {
         "id": "@hf/thebloke/deepseek-coder-6.7b-base-awq",
         "object": "model",
@@ -164,5 +166,8 @@ models = [
         "id": "@hf/thebloke/zephyr-7b-beta-awq",
         "object": "model",
         "owned_by": "cloudflare-ai-beta",
-    },
-]
+    }
+  ],
+  "object": "list"
+}
+
